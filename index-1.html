@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Profile - Rahul Das</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#fff}
+.wrap{max-width:430px;margin:20px auto;padding:16px}
+.card{background:#1e293b;border-radius:18px;padding:18px;margin-bottom:16px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.alert{background:#b91c1c}
+.avatar{width:110px;height:110px;border-radius:50%;background:#2563eb;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:40px;font-weight:bold}
+h1,h2,p{text-align:center}
+.btn{display:block;text-decoration:none;color:#fff;padding:14px;border-radius:12px;margin:10px 0;text-align:center;font-weight:bold}
+.green{background:#16a34a}.red{background:#dc2626}.blue{background:#2563eb}.gray{background:#475569}
+small{color:#cbd5e1}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card alert">
+<h2>🚨 EMERGENCY ALERT</h2>
+<p><b>THIS PERSON IS BLIND / VISUALLY IMPAIRED</b></p>
+<p>If this person is lost, injured, or needs immediate assistance, please help and contact the family immediately.</p>
+</div>
+
+<div class="card">
+<div class="avatar">RD</div>
+<h1>Rahul Das</h1>
+<p>🩸 <b>Blood Group: O+</b></p>
+
+<a class="btn green" href="tel:0987654321">📞 Call Father</a>
+<a class="btn green" href="tel:1234567890">📞 Call Mother</a>
+<a class="btn red" href="tel:112">🚑 Call Emergency (112)</a>
+<a class="btn blue" target="_blank" href="https://goo.gl/maps/5AXP66QWyVMygDe28?g_st=ac">📍 Open Home Location</a>
+
+<div class="card" style="margin:12px 0 0 0;">
+<h3>💊 Medical Information</h3>
+<p>No known allergies.</p>
+<p>No regular medication.</p>
+<p>In case of emergency, contact family immediately.</p>
+</div>
+
+<a class="btn gray" href="#" onclick="readInfo();return false;">🔊 Read Aloud</a>
+<a class="btn gray" href="#" onclick="toggleMode();return false;">🌙 Dark Mode</a>
+<small>Replace the phone numbers with the real contact numbers before using this profile.</small>
+</div>
+</div>
+
+<script>
+function readInfo(){
+const t="Emergency profile. Rahul Das. This person is blind. Blood group O positive. Please contact the family immediately.";
+speechSynthesis.speak(new SpeechSynthesisUtterance(t));
+}
+function toggleMode(){
+const b=document.body;
+if(b.style.background==="white"){
+b.style.background="#0f172a";b.style.color="white";
+}else{
+b.style.background="white";b.style.color="black";
+}
+}
+</script>
+</body>
+</html>
